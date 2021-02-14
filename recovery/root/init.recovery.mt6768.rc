@@ -1,6 +1,7 @@
 on fs
     install_keyring
     mkdir /mnt/vendor/persist 0777 system system
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
     setprop crypto.ready 1
     write /sys/devices/platform/odm/odm:oppo_charger/power_supply/usb/otg_switch 1
 
